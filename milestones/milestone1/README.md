@@ -161,7 +161,7 @@ Main landing page after login with statistics and recent prayers overview.
 ### 3. All Prayers List Page
 Complete list of active prayer requests with filtering and sorting options.
 
-![All Prayers List Wireframe](./wireframes/3-all-prayers-list.png)
+![All Prayers List Wireframe](./wireframes/3-all-prayers.png)
 
 ---
 
