@@ -1,66 +1,11 @@
 # ACTIVITY 1
 
-- This is **Activity 1** ...
+## Loom Video Links
 
-## Ordered List
-1. Apples
-     1. red
-     2. yellow
-     3. green
-2. Bananas
-3. Oranges
-   1. Indented Item 1
-   2. Indented Item 2
-   3. Indented Item 3
-4. Item 4
+1. https://www.loom.com/share/1977c0b4a7d14a7596aa9e43d6bd80fc
 
-- [google](https://google.com/)
-- [Grand Canyon University](https://www.gcu.edu/)
+2. https://www.loom.com/share/90c66364ddb9430cb197f99aa3da3dea
 
-![America's Flagship Seal](https://gitlab.com/bobby.estey/wikibob/-/raw/master/docs/icons/cv64AmericasFlagShip100x100.png)
-![America's Flagship Seal](https://gitlab.com/bobby.estey/wikibob/-/raw/master/docs/icons/cv64AmericasFlagShip100x100.png "America's Flag Ship")
+3. https://www.loom.com/share/af9886a5dac54232990f443b8ec83e96
 
-## Tables
-|First Name|Last Name|
-|--|--|
-|John|Doe|
-|Jane|Doe|
-
-
-```java
-// Java Example
-public class CodeBlock {
-    public static void main(String[] args) {
-        System.out.println("Code Block Example");
-    }
-}
-```
-
-```mermaid
 ---
-title: MermaidJS - Class Diagram - Animal example
----
-classDiagram
-    note "From Duck till Zebra"
-    Animal <|-- Duck
-    note for Duck "can fly\ncan swim\ncan dive\ncan help in debugging"
-    Animal <|-- Fish
-    Animal <|-- Zebra
-    Animal : +int age
-    Animal : +String gender
-    Animal: +isMammal()
-    Animal: +mate()
-    class Duck{
-        +String beakColor
-        +swim()
-        +quack()
-    }
-    class Fish{
-        -int sizeInFeet
-        -canEat()
-    }
-    class Zebra{
-        +bool is_wild
-        +run()
-    }
-```
