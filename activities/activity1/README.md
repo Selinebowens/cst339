@@ -36,26 +36,28 @@ The demonstration includes testing API endpoints using Postman, showing how each
 
 This detailed explanation demonstrates the separation of concerns in the MVC pattern and shows how data flows through the application from an HTTP request to database operations and back to the client response.
 
-### Video Links
+### Links
+####  Video Links ####
 
 *Part 1*
 [https://www.loom.com/share/1977c0b4a7d14a7596aa9e43d6bd80fc](https://www.loom.com/share/1977c0b4a7d14a7596aa9e43d6bd80fc)
 
 *Part 1 cont* [https://www.loom.com/share/90c66364ddb9430cb197f99aa3da3dea](https://www.loom.com/share/90c66364ddb9430cb197f99aa3da3dea)
 
-
 *Part 2 cont*
 [https://www.loom.com/share/af9886a5dac54232990f443b8ec83e96](https://www.loom.com/share/af9886a5dac54232990f443b8ec83e96)
 
+#### Activity 1 Repository Link ####
 
+[https://github.com/Selinebowens/cst339/commit/e3d6327aa95528c035565f9413dbdd53bb901950](https://github.com/Selinebowens/cst339/commit/e3d6327aa95528c035565f9413dbdd53bb901950)
 
 ---
 
-## The Nine API Endpoints
+## The API Endpoints
 
-The MusicAPI implements nine REST endpoints following industry conventions:
+The MusicAPI implements REST endpoints following industry conventions:
 
-### Albums Endpoints (8 endpoints)
+### Albums Endpoints
 1. `GET /albums` - Retrieve all albums with their tracks
 2. `GET /albums?albumId=X` - Retrieve a specific album by ID
 3. `GET /albums/:artist` - Retrieve all albums by a specific artist
