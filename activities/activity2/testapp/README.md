@@ -305,25 +305,6 @@ In older Angular versions, this file defines a module that groups related compon
 
 ---
 
-### Moving Forward
-
-This activity builds a solid foundation for upcoming coursework. The skills and concepts learned here will be essential for:
-
-- **Activity 3 and beyond:** Building more complex Angular applications with multiple components, services, and routing
-- **Full-stack development:** Connecting Angular frontends to Node.js/Express backends
-- **State management:** Managing complex application state as applications grow
-- **API integration:** Making HTTP requests to RESTful APIs
-- **Form handling:** Creating and validating user input forms
-- **Authentication:** Implementing user login and authorization
-
-### Reflection on the Learning Experience
-
-The hands-on, step-by-step approach was highly effective for learning Angular. Rather than just reading documentation, actively installing tools, creating an application, and modifying code provided tangible experience with the framework.
-
-The instant feedback from Angular's development server - seeing changes appear in the browser within seconds - made the learning process engaging and satisfying. This immediate feedback loop is crucial for understanding cause and effect in programming.
-
-Researching the project structure and page generation process deepened my understanding beyond just following steps. Explaining how each file contributes to the final rendered page forced me to think critically about Angular's architecture and understand the framework at a fundamental level.
-
 ### Conclusion
 
 Angular is a comprehensive framework with a learning curve, but this activity provided a gentle introduction that built confidence. The framework'sspecific file organization, naming conventions, architectural patterns, initially seemed restrictive but ultimately provides clarity and consistency. The most important takeaway is understanding that modern web development is fundamentally different from traditional approaches. Instead of manipulating the DOM directly with JavaScript, we declare what the UI should look like based on data, and the framework handles the updates. This declarative, component-based approach is the foundation of modern web development.
