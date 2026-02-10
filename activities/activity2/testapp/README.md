@@ -13,7 +13,7 @@
 2. [Objectives](#objectives)
 3. [Tools and Technologies](#tools-and-technologies)
 4. [Installation and Setup](#installation-and-setup)
-5. [Screenshots and Demonstrations](#screenshots-and-demonstrations)
+5. [Images and Demonstrations](#images-and-demonstrations)
 6. [Research Questions](#research-questions)
 7. [Conclusion](#conclusion)
 
