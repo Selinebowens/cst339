@@ -15,10 +15,19 @@
 5. [REST API Documentation](#rest-api-documentation)
 6. [Database Schema](#database-schema)
 7. [Testing Results](#testing-results)
-8. [Installation & Setup](#installation--setup)
+8. [Project Structure](#project-structure)
+9. [Conclusion](#conclusion)
 
 ---
 
+# Milestone 3: Prayer Notebook Backend API
+
+**Course:** CST-391 - JavaScript Web Application Development  
+**Student:** Night O.  
+**Date:** February 2026  
+**Institution:** Grand Canyon University
+
+---
 ## Video Demonstration
 
 This screencast series provides a complete demonstration of the Prayer Notebook REST API, showcasing all 14 endpoints tested in Postman with real-time database verification in MySQL Workbench. The videos demonstrate full CRUD operations (Create, Read, Update, Delete) for both prayers and categories, including GET operations for retrieving and filtering data, POST operations for creating new records, PUT operations for updates and marking prayers as answered, and DELETE operations showing cascade effects when removing categories. Each operation is verified in MySQL Workbench to confirm that API requests correctly modify the database. Additionally, a code walkthrough video explains the MVC architecture, showing how Models, Queries, DAOs, Controllers, Routes, and Services work together to handle requests from client to database and back.
@@ -441,6 +450,11 @@ prayer-notebook-api/
 ├── .gitignore                        
 └── README.md                         
 ```
+---
+
+## Conclusion
+
+Milestone 3 successfully delivers a fully functional backend API for the Prayer Notebook application, implementing all 14 planned REST endpoints with complete CRUD operations for prayers and categories. The project demonstrates organized code architecture following the MVC pattern with clear separation between Models, DAOs, Controllers, and Routes, comprehensive testing using Postman with database verification in MySQL Workbench. The API handles all core functionality including retrieving prayers with multiple filter options, creating and updating prayer requests and categories, marking prayers as answered with timestamps, searching prayers by keywords across multiple fields, and deleting records with proper cascade handling for related data. This milestone represents a significant step toward creating a complete, production-ready application that helps Christians organize and maintain their prayer life effectively.
 
 ---
 
