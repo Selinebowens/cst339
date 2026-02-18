@@ -1,62 +1,33 @@
 # Milestone 3: Prayer Notebook Backend API
 
 **Course:** CST-391 - JavaScript Web Application Development  
-**Student:** Seline Bowens 
-**Date:** 2/12/2026  
-
----
-
-## Table of Contents
-
-1. [Video Demonstration](#video-demonstration)
-2. [Project Design Documentation](#project-design-documentation)
-3. [Project Overview](#project-overview)
-4. [Design Updates](#design-updates)
-5. [REST API Documentation](#rest-api-documentation)
-6. [Database Schema](#database-schema)
-7. [Testing Results](#testing-results)
-8. [Project Structure](#project-structure)
-9. [Conclusion](#conclusion)
-
----
-
-# Milestone 3: Prayer Notebook Backend API
-
-**Course:** CST-391 - JavaScript Web Application Development  
 **Student:** Night O.  
 **Date:** February 2026  
 **Institution:** Grand Canyon University
 
 ---
-## Video Demonstration
 
-This screencast series provides a complete demonstration of the Prayer Notebook REST API, showcasing all 14 endpoints tested in Postman with real-time database verification in MySQL Workbench. The videos demonstrate full CRUD operations (Create, Read, Update, Delete) for both prayers and categories, including GET operations for retrieving and filtering data, POST operations for creating new records, PUT operations for updates and marking prayers as answered, and DELETE operations showing cascade effects when removing categories. Each operation is verified in MySQL Workbench to confirm that API requests correctly modify the database. Additionally, a code walkthrough video explains the MVC architecture, showing how Models, Queries, DAOs, Controllers, Routes, and Services work together to handle requests from client to database and back.
-
-### Screencast Links
-
-1. https://www.loom.com/share/67782dc7e7f74ba083ec56c23a145144
-
-2. https://www.loom.com/share/ea42898dec95427e8823a9409f05f5d4
-
-3. https://www.loom.com/share/7470fbd6fd874bf480b448512cc723dd
-
-4. https://www.loom.com/share/9083e63dc27e4cbe83565050f20b716b
-
-5. https://www.loom.com/share/99668fe71e59474b955c6a48230a9822
-
----
-
-## Project Design Documentation
-
-**For complete project design and planning documentation, please refer to:**
-
-### [View Milestone 2: Project Proposal & Design](https://github.com/Selinebowens/cst339/blob/main/milestones/milestone2/README.md)
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [Design Updates](#design-updates)
+3. [REST API Documentation](#rest-api-documentation)
+4. [Database Schema](#database-schema)
+5. [Testing Results](#testing-results)
+6. [Known Issues](#known-issues)
+7. [Installation & Setup](#installation--setup)
 
 ---
 
 ## Project Overview
 
 This milestone implements the backend REST API for the Prayer Notebook application. The API provides complete CRUD (Create, Read, Update, Delete) functionality for managing prayer requests and categories, following REST conventions and using a MySQL database for data persistence.
+
+### Technologies Used
+- **Node.js** - JavaScript runtime environment
+- **Express.js** - Web framework for building the API
+- **TypeScript** - Type-safe JavaScript
+- **MySQL** - Relational database
+- **Postman** - API testing
 
 ---
 
@@ -66,18 +37,19 @@ This milestone implements the backend REST API for the Prayer Notebook applicati
 
 | Change Description | Reason | Status |
 |-------------------|--------|--------|
-| Removed user authentication endpoints | Authentication will be implemented later | Planned for later |
-| Added `isAnswered` boolean field | Simplified answered prayer tracking | Completed |
-| Used snake_case in database, camelCase in API | Following SQL naming conventions while maintaining JavaScript standards | Completed |
-| All endpoints require userId as parameter | Temporary solution until authentication is implemented | Completed |
-| Simplified color field to hex string | Easier frontend integration | Completed |
+| Removed user authentication endpoints | Authentication will be implemented in Milestone 4 with frontend | Planned for later |
+| Added `isAnswered` boolean field | Simplified answered prayer tracking | ✅ Completed |
+| Used snake_case in database, camelCase in API | Following SQL naming conventions while maintaining JavaScript standards | ✅ Completed |
+| All endpoints require userId as parameter | Temporary solution until authentication is implemented | ✅ Completed |
+| Simplified color field to hex string | Easier frontend integration | ✅ Completed |
 
 ### Known Issues / TO DO
 
 | Issue | Priority | Notes |
 |-------|----------|-------|
 | No authentication system | High | Users must pass userId manually - not secure for production |
-| No input validation library | Medium | Currently using basic validation |
+| No input validation library | Medium | Currently using basic validation - should add Joi or similar |
+| No rate limiting | Low | Should add express-rate-limit for production |
 | No logging middleware | Low | Should add Winston or Morgan for better logging |
 
 ---
@@ -173,7 +145,7 @@ Content-Type: application/json
 ```json
 {
   "message": "Prayer created successfully",
-  "insertId": 7
+  "insertId": 4
 }
 ```
 
@@ -292,7 +264,7 @@ Content-Type: application/json
 ```json
 {
   "message": "Category created successfully",
-  "insertId": 7
+  "insertId": 4
 }
 ```
 
@@ -389,72 +361,108 @@ CREATE TABLE prayers (
 All 14 API endpoints were tested successfully using Postman:
 
 ### CRUD Operations Verified
-- **Create** - POST endpoints successfully create records
-- **Read** - GET endpoints retrieve correct data
-- **Update** - PUT endpoints modify records correctly
-- **Delete** - DELETE endpoints remove records
+- ✅ **Create** - POST endpoints successfully create records
+- ✅ **Read** - GET endpoints retrieve correct data
+- ✅ **Update** - PUT endpoints modify records correctly
+- ✅ **Delete** - DELETE endpoints remove records
 
 ### Test Cases Passed
-1. Get all prayers
-2. Get prayer by ID
-3. Get prayers by category
-4. Get answered prayers
-5. Search prayers by keyword
-6. Create new prayer
-7. Update existing prayer
-8. Mark prayer as answered
-9. Delete prayer
-10. Get all categories
-11. Get category by ID
-12. Create new category
-13. Update category
-14. Delete category
+1. ✅ Get all prayers
+2. ✅ Get prayer by ID
+3. ✅ Get prayers by category
+4. ✅ Get answered prayers
+5. ✅ Search prayers by keyword
+6. ✅ Create new prayer
+7. ✅ Update existing prayer
+8. ✅ Mark prayer as answered
+9. ✅ Delete prayer
+10. ✅ Get all categories
+11. ✅ Get category by ID
+12. ✅ Create new category
+13. ✅ Update category
+14. ✅ Delete category
 
 ### Database Verification
 All database operations were verified in MySQL Workbench:
-- CREATE operations insert new records
-- UPDATE operations modify existing records
-- DELETE operations remove records
-- Foreign key constraints work correctly
-- CASCADE deletes function properly
+- ✅ CREATE operations insert new records
+- ✅ UPDATE operations modify existing records
+- ✅ DELETE operations remove records
+- ✅ Foreign key constraints work correctly
+- ✅ CASCADE deletes function properly
+
+---
+
+## Installation & Setup
+
+### Prerequisites
+- Node.js (v18 or higher)
+- MySQL (v8 or higher)
+- npm
+
+### Installation Steps
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/Selinebowens/cst339.git
+cd cst391/milestones/milestone3/prayer-notebook-api
+```
+
+2. **Install dependencies**
+```bash
+npm install
+```
+
+3. **Create MySQL database**
+```sql
+CREATE DATABASE prayer_notebook;
+-- Run the SQL scripts from database schema section
+```
+
+4. **Create .env file**
+```
+PORT=5000
+MY_SQL_DB_HOST=127.0.0.1
+MY_SQL_DB_USER=root
+MY_SQL_DB_PASSWORD=your_password_here
+MY_SQL_DB_PORT=3306
+MY_SQL_DB_DATABASE=prayer_notebook
+MY_SQL_DB_CONNECTION_LIMIT=10
+NODE_ENV=development
+```
+
+5. **Start the server**
+```bash
+npm run start
+```
+
+6. **Test the API**
+- Open browser: `http://localhost:5000`
+- Use Postman to test endpoints
 
 ---
 
 ## Project Structure
 ```
 prayer-notebook-api/
-├── node_modules/                      
 ├── src/
-│   ├── categories/
-│   │   ├── categories.controller.ts  
-│   │   ├── categories.dao.ts          
-│   │   ├── categories.model.ts       
-│   │   ├── categories.queries.ts     
-│   │   └── categories.routes.ts       
-│   ├── middleware/                  
 │   ├── prayers/
-│   │   ├── prayers.controller.ts     
-│   │   ├── prayers.dao.ts            
-│   │   ├── prayers.model.ts           
-│   │   ├── prayers.queries.ts        
-│   │   └── prayers.routes.ts          
+│   │   ├── prayers.model.ts
+│   │   ├── prayers.queries.ts
+│   │   ├── prayers.dao.ts
+│   │   ├── prayers.controller.ts
+│   │   └── prayers.routes.ts
+│   ├── categories/
+│   │   ├── categories.model.ts
+│   │   ├── categories.queries.ts
+│   │   ├── categories.dao.ts
+│   │   ├── categories.controller.ts
+│   │   └── categories.routes.ts
 │   ├── services/
-│   │   └── mysql.connector.ts       
-│   ├── users/
-│   │   └── users.model.ts            
-│   └── app.ts                       
-├── .env                              
-├── package-lock.json                 
-├── package.json                       
-├── tsconfig.json                     
-├── .gitignore                        
-└── README.md                         
+│   │   └── mysql.connector.ts
+│   └── app.ts
+├── .env
+├── .gitignore
+├── package.json
+├── tsconfig.json
+└── README.md
 ```
----
-
-## Conclusion
-
-Milestone 3 successfully delivers a fully functional backend API for the Prayer Notebook application, implementing all 14 planned REST endpoints with complete CRUD operations for prayers and categories. The project demonstrates organized code architecture following the MVC pattern with clear separation between Models, DAOs, Controllers, and Routes, comprehensive testing using Postman with database verification in MySQL Workbench. The API handles all core functionality including retrieving prayers with multiple filter options, creating and updating prayer requests and categories, marking prayers as answered with timestamps, searching prayers by keywords across multiple fields, and deleting records with proper cascade handling for related data. This milestone represents a significant step toward creating a complete, production-ready application that helps Christians organize and maintain their prayer life effectively.
-
----
-

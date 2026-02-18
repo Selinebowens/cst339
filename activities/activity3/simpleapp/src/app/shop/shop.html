@@ -1,0 +1,12 @@
+<form [formGroup]="appForm" (ngSubmit)="onSubmit(appForm.value)">
+  <div class="form-group">
+    <label>{{question}}</label>
+    <input type="text" class="form-control" formControlName="answer">
+  </div>
+  <button type="submit" class="btn btn-success">Tell Me</button>
+</form>
+<br/>
+<label>Your name is {{answer}}</label>
+
+<hr>
+<app-info></app-info>
