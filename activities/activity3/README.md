@@ -344,7 +344,7 @@ export class MusicServiceService {
 
 ### Part 1 Achievements
 
-Part 1 introduced fundamental Angular concepts through building a simple application. I learned how to create components, implement different types of forms (reactive and template-driven), and use Bootstrap for responsive design. The Shop component demonstrated reactive forms with FormGroup and FormControl, while the Info component showed template-driven forms with two-way data binding using ngModel. 
+Part 1 introduced fundamental Angular concepts through building a simple application. I learned how to create components, implement different types of forms (reactive and template-driven), and use Bootstrap for responsive design. The Shop component demonstrated reactive forms with FormGroup and FormControl, while the Info component showed template-driven forms with two-way data binding using ngModel. Testing the responsive grid on different screen sizes reinforced the importance of mobile-first design.
 
 ### Part 2 Achievements
 
