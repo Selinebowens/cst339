@@ -1,0 +1,36 @@
+<div class="container">
+  <h2>Create New Album</h2>
+  
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Artist:</label>
+      <select class="form-control" [(ngModel)]="album.artist" name="artist" required>
+        <option value="">Select Artist</option>
+        <option *ngFor="let artist of artists" [value]="artist">{{ artist }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Album Title:</label>
+      <input type="text" class="form-control" [(ngModel)]="album.title" name="title" required>
+    </div>
+
+    <div class="form-group">
+      <label>Description:</label>
+      <textarea class="form-control" [(ngModel)]="album.description" name="description" rows="3" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Year:</label>
+      <input type="text" class="form-control" [(ngModel)]="album.year" name="year" required>
+    </div>
+
+    <div class="form-group">
+      <label>Image URL:</label>
+      <input type="text" class="form-control" [(ngModel)]="album.image" name="image" placeholder="https://picsum.photos/150?random=4">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create Album</button>
+    <button type="button" class="btn btn-secondary" routerLink="/list-artists">Cancel</button>
+  </form>
+</div>
