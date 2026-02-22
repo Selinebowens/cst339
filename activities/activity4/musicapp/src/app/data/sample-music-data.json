@@ -1,0 +1,74 @@
+[
+    {
+        "id": 0,
+        "artist": "The Beatles",
+        "title": "Abbey Road",
+        "description": "Abbey Road is the eleventh studio album by the English rock band the Beatles, released on 26 September 1969.",
+        "year": "1969",
+        "image": "https://picsum.photos/150?random=1",
+        "tracks": [
+            {
+                "id": 0,
+                "number": "1",
+                "title": "Come Together",
+                "lyrics": "Song lyrics here",
+                "video": "https://www.youtube.com/watch?v=45cYwDMibGo"
+            },
+            {
+                "id": 1,
+                "number": "2",
+                "title": "Something",
+                "lyrics": "Song lyrics here",
+                "video": "https://www.youtube.com/watch?v=UelDrZ1aFeY"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "artist": "The Beatles",
+        "title": "Let It Be",
+        "description": "Let It Be is the twelfth and final studio album by the Beatles, released on 8 May 1970.",
+        "year": "1970",
+        "image": "https://picsum.photos/150?random=2",
+        "tracks": [
+            {
+                "id": 0,
+                "number": "1",
+                "title": "Two of Us",
+                "lyrics": "Song lyrics here",
+                "video": "https://www.youtube.com/watch?v=0KY4K5TeHHw"
+            },
+            {
+                "id": 1,
+                "number": "2",
+                "title": "Dig a Pony",
+                "lyrics": "Song lyrics here",
+                "video": "https://www.youtube.com/watch?v=kqwx_JM-Y9Q"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "artist": "Pink Floyd",
+        "title": "The Dark Side of the Moon",
+        "description": "The Dark Side of the Moon is the eighth studio album by Pink Floyd, released on 1 March 1973.",
+        "year": "1973",
+        "image": "https://picsum.photos/150?random=3",
+        "tracks": [
+            {
+                "id": 0,
+                "number": "1",
+                "title": "Speak to Me",
+                "lyrics": "Instrumental track",
+                "video": "https://www.youtube.com/watch?v=mrojrDCI02k"
+            },
+            {
+                "id": 1,
+                "number": "2",
+                "title": "Breathe",
+                "lyrics": "Song lyrics here",
+                "video": "https://www.youtube.com/watch?v=mrojrDCI02k"
+            }
+        ]
+    }
+]
