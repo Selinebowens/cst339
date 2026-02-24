@@ -86,8 +86,6 @@ graph TD
 
 ## Design Updates
 
-## Design Updates
-
 The Angular frontend was built to connect with the Milestone 3 REST API backend. 
 The overall design follows the original wireframes from Milestone 1 as closely as 
 possible given the time available. Below is a comparison of what was planned versus 
