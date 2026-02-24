@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          <h3>{{ isEditMode ? 'Edit Prayer' : 'Add New Prayer' }}</h3>
+        </div>
+        <div class="card-body">
+          
+          <!-- Loading Spinner -->
+          <div *ngIf="loading" class="text-center">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+
+          <!-- Prayer Form -->
+          <form *ngIf="!loading" (ngSubmit)="onSubmit()">
+            
+            <!-- Title -->
+            <div class="mb-3">
+              <label for="title" class="form-label">Prayer Title *</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="title" 
+                [(ngModel)]="prayer.title" 
+                name="title"
+                required
+                placeholder="Enter prayer title">
+            </div>
+
+        <!-- Category -->
+        <div class="mb-3">
+        <label for="category" class="form-label">Category *</label>
+        <select 
+            class="form-select" 
+            id="category" 
+            [(ngModel)]="prayer.categoryId" 
+            name="categoryId"
+            required>
+            <option [ngValue]="null">Select a category</option>
+            <option [ngValue]="1">Family</option>
+            <option [ngValue]="2">Health</option>
+            <option [ngValue]="3">Work</option>
+        </select>
+        </div>
+
+            <!-- Description -->
+            <div class="mb-3">
+              <label for="description" class="form-label">Description *</label>
+              <textarea 
+                class="form-control" 
+                id="description" 
+                [(ngModel)]="prayer.description" 
+                name="description"
+                rows="4"
+                required
+                placeholder="Describe your prayer request"></textarea>
+            </div>
+
+            <!-- Notes -->
+            <div class="mb-3">
+              <label for="notes" class="form-label">Notes (Optional)</label>
+              <textarea 
+                class="form-control" 
+                id="notes" 
+                [(ngModel)]="prayer.notes" 
+                name="notes"
+                rows="2"
+                placeholder="Additional notes or updates"></textarea>
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex justify-content-between">
+              <button type="submit" class="btn btn-primary">
+                <i class="bi bi-save"></i> {{ isEditMode ? 'Update Prayer' : 'Create Prayer' }}
+              </button>
+              <a routerLink="/prayers" class="btn btn-secondary">
+                <i class="bi bi-x-circle"></i> Cancel
+              </a>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

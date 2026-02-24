@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>{{ pageTitle }}</h2>
+    <a routerLink="/prayers/new" class="btn btn-primary">
+      <i class="bi bi-plus-circle"></i> Add New Prayer
+    </a>
+  </div>
+
+  <!-- Loading Spinner -->
+  <div *ngIf="loading" class="text-center">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Prayers Table -->
+  <div *ngIf="!loading && prayers.length > 0" class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead class="table-primary">
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Category</th>
+          <th>Status</th>
+          <th>Date Created</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let prayer of prayers">
+          <td>{{ prayer.title }}</td>
+          <td>{{ prayer.description | slice:0:50 }}{{ prayer.description.length > 50 ? '...' : '' }}</td>
+          <td>
+            <span class="badge bg-secondary">Category {{ prayer.categoryId }}</span>
+          </td>
+          <td>
+            <span *ngIf="prayer.isAnswered" class="badge bg-success">Answered</span>
+            <span *ngIf="!prayer.isAnswered" class="badge bg-warning text-dark">Pending</span>
+          </td>
+          <td>{{ prayer.dateCreated | date:'short' }}</td>
+          <td>
+            <div class="btn-group" role="group">
+              <a [routerLink]="['/prayers/edit', prayer.id]" class="btn btn-sm btn-warning">Edit</a>
+              <button (click)="deletePrayer(prayer.id)" class="btn btn-sm btn-danger">Delete</button>
+              <button *ngIf="!prayer.isAnswered" (click)="markAsAnswered(prayer.id)" class="btn btn-sm btn-success">Mark Answered</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- No Prayers Message -->
+  <div *ngIf="!loading && prayers.length === 0" class="alert alert-info">
+    <h4>No prayers found</h4>
+    <p>Start by <a routerLink="/prayers/new">adding your first prayer</a>.</p>
+  </div>
+</div>
