@@ -43,6 +43,7 @@ In Part 3, the music app was updated in three stages. First, the album data that
 ### Music App with Real Album Data from API
 
 ![Music App with Axios Data](./screenshots/1-music-app-axios-data.png)
+
 The music app showing album cards loaded from the MySQL database via the Express REST API using Axios. Each card shows the album cover image, title, description, and an OK button. The search form at the top is ready to filter results.
 
 ---
@@ -50,6 +51,7 @@ The music app showing album cards loaded from the MySQL database via the Express
 ### Search Filtering Albums by Keyword
 
 ![Search Filtering Albums](./screenshots/2-search-filter-rock.png)
+
 The search form filtering albums by the word "rock". Only albums whose descriptions contain that word are displayed. The browser console shows the search phrase being logged and albums that do not match being excluded. The responsive layout adjusts to show fewer cards when results are filtered.
 
 ---
@@ -81,6 +83,7 @@ The User page demonstrated dynamic routing by reading a name from the URL. Click
 ### Login Page with Friends List
 
 ![Login Page](./screenshots/4-mini-app-login.png)
+
 The Mini App login page with the NavBar showing links for About, Contact Us, User, and Login. A "Login Here" button is visible and the friends list is loaded from the User.js component, displayed as clickable links.
 
 ---
@@ -88,6 +91,7 @@ The Mini App login page with the NavBar showing links for About, Contact Us, Use
 ### Home Page (Default Route)
 
 ![Home Page](./screenshots/5-mini-app-home.png)
+
 The Mini App home page at localhost:3001 showing the default route. The NavBar is visible at the top. The friends list is displayed, demonstrating that the User component is rendered on the default route. No special page content is shown. This is the starting state of the app.
 
 ---
@@ -95,6 +99,7 @@ The Mini App home page at localhost:3001 showing the default route. The NavBar i
 ### About Page
 
 ![About Page](./screenshots/6-mini-app-about.png)
+
 The About page showing company information: "About our company - We specialize in making great products and services."  when "About" is clicked on the NavBar, confirming that routing works correctly and the NavBar component persists across all pages. 
 
 ---
@@ -102,6 +107,7 @@ The About page showing company information: "About our company - We specialize i
 ### Contact Us Page
 
 ![Contact Us Page](./screenshots/7-mini-app-contact.png)
+
 The Contact Us page showing company contact details. This page is rendered by the ContactUs.js component when the user clicks the Contact Us link in the NavBar.
 
 ---
@@ -109,6 +115,7 @@ The Contact Us page showing company contact details. This page is rendered by th
 ### User Page with Default Name
 
 ![User Page Default](./screenshots/8-mini-app-user-default.png)
+
 The User page showing "Hello Ned Navigator". The default name displayed when no specific friend has been selected from the list. This is the starting state of the /user route before a name is clicked.
 
 ---
@@ -116,6 +123,7 @@ The User page showing "Hello Ned Navigator". The default name displayed when no 
 ### User Page with Dynamic Route Parameter
 
 ![User Page Dynamic](./screenshots/9-mini-app-user-brianna.png)
+
 The User page showing "Hello Brianna" after clicking the name Brianna from the friends list. This demonstrates how React Router route parameters work. The URL changes to include the name, and the component reads it to display a personalized message.
 
 ---
@@ -138,6 +146,7 @@ The key challenge solved in this activity was wiring the OK button correctly. Th
 ### Music App with NavBar and Album Cards
 
 ![Music App NavBar](./screenshots/10-music-app-navbar.png)
+
 The completed music app with the "My Music" NavBar showing Main and New links. Albums from the MySQL database are displayed as cards with cover images, titles, descriptions, and OK buttons. The search form is at the top. This is the main page of the Part 4 music app.
 
 ---
@@ -145,12 +154,14 @@ The completed music app with the "My Music" NavBar showing Main and New links. A
 ### Album Details Page (OneAlbum)
 
 ![Album Details Page](./screenshots/11-album-details-revolver.png)
+
 The Album Details page for Revolver, reached by clicking the OK button on a card. The page shows the album cover image, title "Album Details for Revolver", description, and an Edit button on the left. On the right side are placeholder text fields for showing track lyrics and a YouTube video. This demonstrates that React Router navigation from the album list to the detail page is working correctly.
 
 ---
 
 ### New Album Form Page
 ![12-new-album-form.png](./screenshots/12-new-album-form.png)
+
 The New Album Form page reached by clicking the "New" link in the NavBar. The page shows "This is a New Album Form" as a placeholder, confirming that the route is correctly connected in App.js and the NavBar navigation is fully working across all pages.
 
 ## Conclusion
