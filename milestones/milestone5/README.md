@@ -8,8 +8,8 @@
 ---
 
 ## Table of Contents
-1. [Video Demonstration](#video-demonstration)
-2. [Introduction](#introduction)
+1. [Introduction](#introduction)
+2. [Video Demonstration](#video-demonstration)
 3. [What was Built](#what-was-built)
 4. [Application Screenshots](#application-screenshots)
 5. [Design Updates](#design-updates)
@@ -21,14 +21,6 @@
 
 ---
 
-## Submission Links
-
-| Deliverable | Link |
-|-------------|------|
-| GitHub Repository | https://github.com/Selinebowens/cst339 |
-| Screencast | [paste your Loom or YouTube link here] |
-| PowerPoint | See Milestone5-Presentation.pptx in this repository |
-
 ## Introduction
 
  In this milestone is about React frontend that connects to the backend API which was created in Milestone 3. The goal was to give the Prayer Notebook a real user interface, so that instead of using Postman to test API calls, a user can simply open a browser and manage their prayers by clicking buttons on a webpage.
@@ -38,18 +30,16 @@ The Prayer Notebook is a web app designed to help Christians keep track of their
 ---
 ## Video Demonstration
 
-### Loom Links
+### Loom Screencast
 
-- https://www.loom.com/share/0e5f4f0629694f228712c22583c848c8
-
-- *cont* https://www.loom.com/share/a249f9fd55d74851bfcdde703bcdd0ad
-
----
-### Powerpoint Presentation
-
-**PowerPoint:** [View Presentation](./CST-391-Milestone5-presentation.pptx)
+- [Part 1](https://www.loom.com/share/0e5f4f0629694f228712c22583c848c8)
+- [Part 2](https://www.loom.com/share/a249f9fd55d74851bfcdde703bcdd0ad)
 
 ---
+
+### PowerPoint Presentation
+
+**PowerPoint:** [View Presentation](./CST-391-Milestone5%20presentation.pptx)
 
 ## What was Built
 
