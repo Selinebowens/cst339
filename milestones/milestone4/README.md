@@ -39,7 +39,7 @@ The screencast demonstrates full CRUD operations through the Angular frontend in
 ---
 ## Powerpoint Presentation
 
-**PowerPoint:** [View Presentation](./CST-391-Milestone4-presentation.pptx)
+**PowerPoint:** [View Presentation](./CST-391-Milestone%204%20presentation.pptx)
 
 ---
 
