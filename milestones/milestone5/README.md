@@ -41,6 +41,8 @@ The Prayer Notebook is a web app designed to help Christians keep track of their
 
 **PowerPoint:** [View Presentation](./CST-391-Milestone5%20presentation.pptx)
 
+---
+
 ## What was Built
 
 The React app has four main pages connected by a Bootstrap navigation bar:
